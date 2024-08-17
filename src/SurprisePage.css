@@ -1,0 +1,10 @@
+   .surprise-page {
+    background-size: cover;
+    display: flex;
+    backgroundImage:"./assets/background.jpg" !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  

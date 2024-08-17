@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import React,{useEffect,useRef} from 'react';
+import BirthdayCard from './BirthdayCard';
+import PhotoGallery from './PhotoGallery';
+import MessageForm from './MessageForm';
+import {  Route, Routes } from 'react-router-dom';
+import SurprisePage from './SurprisePage';
 import './App.css';
 
 function App() {
+  const audioRef = useRef(null);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.play();
+    }
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <audio ref={audioRef} src="/Happybirthday.mp3" loop />
+      <Routes>
+        <Route path='/'element={<BirthdayCard />} />
+        <Route path='/surprise' element={<SurprisePage />} />
+        <Route path='/photogallery' element={<PhotoGallery/>}/>
+        <Route path='/messageform' element={<MessageForm/>}/>
+      </Routes>
     </div>
   );
 }
