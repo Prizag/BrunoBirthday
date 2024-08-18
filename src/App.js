@@ -5,6 +5,9 @@ import MessageForm from './MessageForm';
 import {  Route, Routes } from 'react-router-dom';
 import SurprisePage from './SurprisePage';
 import './App.css';
+import birthdayAudio from './assets/Happybirthday.mp3';
+
+
 
 function App() {
   const audioRef = useRef(null);
@@ -16,11 +19,14 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <audio ref={audioRef} src="/Happybirthday.mp3" loop />
+      <audio ref={audioRef} src={birthdayAudio} loop />
+    
+
+
       <Routes>
         <Route path='/'element={<BirthdayCard />} />
         <Route path='/surprise' element={<SurprisePage />} />
-        <Route path='/photogallery' element={<PhotoGallery/>}/>
+        <Route path='/PhotoGallery' element={<PhotoGallery/>}/>
         <Route path='/messageform' element={<MessageForm/>}/>
       </Routes>
     </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './BirthdayCard.css';
 import { motion } from 'framer-motion';
+import photo4 from './assets/photo4.jpg';
 
 function BirthdayCard() {
  
@@ -17,7 +18,7 @@ function BirthdayCard() {
 
     <h1>Happy Birthday, Bruno!</h1>
     <motion.img
-      src="./assets/photo4.jpg"
+      src={photo4}
       alt="Birthday"
       whileHover={{ scale: 1.1 }}
       transition={{ type: "spring", stiffness: 300 }}

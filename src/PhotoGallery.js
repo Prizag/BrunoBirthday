@@ -1,21 +1,25 @@
 import React,{useEffect} from 'react';
 import ImageGallery from 'react-image-gallery';
+
 import "react-image-gallery/styles/css/image-gallery.css";
 import { motion } from 'framer-motion';
 import { NavLink } from 'react-router-dom';
+import photo1 from './assets/photo1.jpg';
+import photo2 from './assets/photo2.jpg';
+import photo3 from './assets/photo3.jpg';
 
 const images = [
   {
-    original: '/assets/photo1.jpg',
-    thumbnail: '/assets/photo1.jpg',
+    original: photo1,
+    thumbnail: photo1,
   },
   {
-    original: './assets/photo2.jpg',
-    thumbnail: './assets/photo2.jpg',
+    original: photo2,
+    thumbnail: photo2,
   },
   {
-    original: './assets/photo3.jpg',
-    thumbnail: './assets/photo3.jpg',
+    original: photo3,
+    thumbnail: photo3,
   },
 ];
 
