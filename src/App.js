@@ -24,7 +24,7 @@ function App() {
 
 
       <Routes>
-        <Route path='/'element={<BirthdayCard />} />
+        <Route path='/BrunoBirthday'element={<BirthdayCard />} />
         <Route path='/surprise' element={<SurprisePage />} />
         <Route path='/PhotoGallery' element={<PhotoGallery/>}/>
         <Route path='/messageform' element={<MessageForm/>}/>
