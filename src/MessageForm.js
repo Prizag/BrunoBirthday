@@ -8,7 +8,7 @@ function MessageForm() {
   useEffect(() => {
     if (window.performance) {
       if (performance.getEntriesByType('navigation')[0].type === 'reload') {
-        window.location.href = '/';
+        window.location.href = '/BrunoBirthday';
       }
     }
   }, []);
